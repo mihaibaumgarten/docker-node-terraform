@@ -1,7 +1,7 @@
 FROM jenkins/jnlp-slave:alpine
 
-ENV TERRAFORM_VERSION=0.12.0
-ENV TERRAFORM_SHA256SUM=737ec6a684669125579858700a294799aba7deb7a72393eda64bea99aff8b38d
+ENV TERRAFORM_VERSION=0.11.13
+ENV TERRAFORM_SHA256SUM=5925cd4d81e7d8f42a0054df2aafd66e2ab7408dbed2bd748f0022cfe592f8d2
 
 USER root
 RUN apk add --update make git curl curl-dev openssh && \
@@ -10,6 +10,3 @@ RUN apk add --update make git curl curl-dev openssh && \
     sha256sum -cs terraform_${TERRAFORM_VERSION}_SHA256SUMS && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
-    
-#RUN apk add nodejs
-#USER jenkins
