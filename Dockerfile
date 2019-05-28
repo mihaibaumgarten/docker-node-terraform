@@ -11,6 +11,7 @@ RUN apk add --update make git curl curl-dev openssh && \
     unzip terraform_${TERRAFORM_VERSION}_linux_amd64.zip -d /bin && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
     
+#Temporary commented nodejs installation
 #USER root
 #RUN apk add nodejs
 #USER jenkins
