@@ -13,7 +13,7 @@ RUN apk add --update make git curl curl-dev openssh && \
     rm -f terraform_${TERRAFORM_VERSION}_linux_amd64.zip
    
 # Install latest nodejs  
-RUN apk add nodejs
+RUN apk add --update nodejs nodejs-npm
 
 # Switch to jenkins user
-#USER jenkins
+USER jenkins
