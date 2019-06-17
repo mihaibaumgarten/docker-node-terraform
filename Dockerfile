@@ -16,4 +16,4 @@ RUN apk add --update make git curl curl-dev openssh && \
 RUN apk add --update nodejs nodejs-npm
 
 # Switch to jenkins user
-USER jenkins
+#USER jenkins
