@@ -15,5 +15,8 @@ RUN apk add --update make git curl curl-dev openssh && \
 # Install latest nodejs  
 RUN apk add --update nodejs nodejs-npm
 
-# Switch to jenkins user
-#USER jenkins
+# Install AWS CLI
+ENV AWS_DEFAULT_REGION=eu-west-1
+RUN apk add --no-cache python py2-pip groff
+RUN pip install awscli
+ENTRYPOINT ["aws"]
