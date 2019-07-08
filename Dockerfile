@@ -15,8 +15,8 @@ RUN apk add --update make git curl curl-dev openssh && \
 # Install latest nodejs  
 RUN apk add --update nodejs nodejs-npm
 
-# Install AWS CLI
-ENV AWS_DEFAULT_REGION=eu-west-1
-RUN apk add --no-cache python py2-pip groff
-RUN pip install awscli
-ENTRYPOINT ["aws"]
+# Install AWS CLI - commented
+#ENV AWS_DEFAULT_REGION=eu-west-1
+#RUN apk add --update python py2-pip groff
+#RUN pip install awscli
+#ENTRYPOINT ["aws"]
