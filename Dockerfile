@@ -1,5 +1,6 @@
 FROM jenkins/jnlp-slave:alpine
 
+USER root
 RUN sed -i -e 's/v3\.9/v3.10/g' /etc/apk/repositories
 
 RUN apk update
